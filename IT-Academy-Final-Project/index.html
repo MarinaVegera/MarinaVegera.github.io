@@ -1,12 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/main_page.css">
+
 </head>
+
 <body>
-    <div>my project</div>
+    <input type="checkbox" id="sidebar" hidden>
+
+    <div class="header">
+
+        <label for="sidebar" class="sidebar-container">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+            <span>Каталог</span>
+        </label>
+
+        <p>gifts.by</p>
+        <a href="">Активировать подарок</a>
+        <div class="header-action-container">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+            <span class="material-symbols-outlined">
+                person
+            </span>
+
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li class="sidebar-item"><a href="">Весь каталог</a></li>
+            <li class="sidebar-item"><a href="">Активный отдых</a></li>
+            <li class="sidebar-item"><a href="">Обучение и мастер-классы</a></li>
+            <li class="sidebar-item"><a href="">Романтические подарки</a></li>
+            <li class="sidebar-item"><a href="">Красота и здоровье</a></li>
+            <li class="sidebar-item"><a href="">Подарочные наборы</a></li>
+            <li class="sidebar-item"><a href="">Онлайн-подарки</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <p class="title-container margin-top-70">ПОДОБРАТЬ ПОДАРОК</p>
+        <form class="choice-block">
+            <div class="category-container">
+                <!--<input type="text" id="category-input" placeholder="Категория" onclick="openContent()">
+                <label for="category-input" class="label-item">
+                    <span class="material-symbols-outlined expand-item">
+                        expand_less
+                    </span>
+                </label>-->
+                <div class="input-field" onclick="openContentCategory()">
+                    <span class="value-choice">Категория</span>
+                    <span class="material-symbols-outlined expand-item-category">
+                        expand_less
+                    </span>
+                </div>
+                <div class="choice-radio-container choice-radio-container-category" hidden>
+                    <input class="radio-item" type="radio" id="active-rest" name="category-value" value="Активный отдых"
+                        onclick="changeCategory()" hidden>
+                    <label for="active-rest">Активный отдых</label>
+                    <input class="radio-item" type="radio" id="training" name="category-value"
+                        value="Обучение и мастер-классы" onclick="changeCategory()" hidden>
+                    <label for="training">Обучение и мастер-классы</label>
+                    <input class="radio-item" type="radio" id="romantic-gifts" name="category-value"
+                        value="Романтические подарки" onclick="changeCategory()" hidden>
+                    <label for="romantic-gifts">Романтические подарки</label>
+                    <input class="radio-item" type="radio" id="beauty" name="category-value" value="Красота и здоровье"
+                        onclick="changeCategory()" hidden>
+                    <label for="beauty">Красота и здоровье</label>
+                    <input class="radio-item" type="radio" id="gift-set" name="category-value" value="Наборы"
+                        onclick="changeCategory()" hidden>
+                    <label for="gift-set">Наборы</label>
+                    <input class="radio-item" type="radio" id="online" name="category-value" value="Онлайн"
+                        onclick="changeCategory()" hidden>
+                    <label for="online">Онлайн</label>
+                </div>
+            </div>
+            <div class="category-container">
+                <div class="input-field" onclick="openContentWhom()">
+                    <span class="value-choice">Кому</span>
+                    <span class="material-symbols-outlined expand-item-whom">
+                        expand_less
+                    </span>
+                </div>
+                <div class="choice-radio-container choice-radio-container-whom" hidden>
+                    <input class="radio-item" type="radio" id="for-her" name="for-whom" value="Для нее"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-her">Для нее</label>
+                    <input class="radio-item" type="radio" id="for-him" name="for-whom" value="Для него"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-him">Для него</label>
+                    <input class="radio-item" type="radio" id="for-friends" name="for-whom" value="Друзьям"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-friends">Друзьям</label>
+                    <input class="radio-item" type="radio" id="for-parents" name="for-whom" value="Родителям"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-parents">Родителям</label>
+                    <input class="radio-item" type="radio" id="for-child" name="for-whom" value="Для ребенка"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-child">Для ребенка</label>
+                    <input class="radio-item" type="radio" id="for-family" name="for-whom" value="Для семьи"
+                        onclick="changeCategory()" hidden>
+                    <label for="for-family">Для семьи</label>
+                </div>
+            </div>
+            <div class="category-container">
+                <!--<input type="text" id="category-input" placeholder="Категория" onclick="openContent()">
+                <label for="category-input" class="label-item">
+                    <span class="material-symbols-outlined expand-item">
+                        expand_less
+                    </span>
+                </label>-->
+                <div class="input-field" onclick="openContentPrice()">
+                    <span class="value-choice">Цена</span>
+                    <span class="material-symbols-outlined expand-item-price">
+                        expand_less
+                    </span>
+                </div>
+                <div class="choice-radio-container choice-radio-container-price" hidden>
+                    <input class="radio-item" type="radio" id="active-rest" name="category-value" value="Активный отдых"
+                        onclick="changeCategory()" hidden>
+                    <label for="active-rest">Активный отдых</label>
+                    <input class="radio-item" type="radio" id="training" name="category-value"
+                        value="Обучение и мастер-классы" onclick="changeCategory()" hidden>
+                    <label for="training">Обучение и мастер-классы</label>
+                    <input class="radio-item" type="radio" id="romantic-gifts" name="category-value"
+                        value="Романтические подарки" onclick="changeCategory()" hidden>
+                    <label for="romantic-gifts">Романтические подарки</label>
+                    <input class="radio-item" type="radio" id="beauty" name="category-value" value="Красота и здоровье"
+                        onclick="changeCategory()" hidden>
+                    <label for="beauty">Красота и здоровье</label>
+                    <input class="radio-item" type="radio" id="gift-set" name="category-value" value="Наборы"
+                        onclick="changeCategory()" hidden>
+                    <label for="gift-set">Наборы</label>
+                    <input class="radio-item" type="radio" id="online" name="category-value" value="Онлайн"
+                        onclick="changeCategory()" hidden>
+                    <label for="online">Онлайн</label>
+                </div>
+            </div>
+            <button type="submit" class="button-choice">Подобрать</button>
+        </form>
+        <div class="navigation-bar">
+
+            <a class="navigation-bar-item" href=""><img src="./pics/gift.png" alt=""><span>GIFTS.BY</span>
+                <p>Все сертификаты</p>
+            </a>
+
+            <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/spa.png" alt="">
+                <p>Красота и здоровье</p>
+            </a>
+            <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/education.png" alt="">
+                <p>Обучение и мастер-классы</p>
+            </a>
+            <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/active.png" alt="">
+                <p>Активный отдых</p>
+            </a>
+            <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/cake.png" alt="">
+                <p>Подарок на день рождения</p>
+            </a>
+        </div>
+        <div class="navigation-offering-container">
+            <p class="title-container">Мы предлагаем</p>
+            <div class="carousel-button-container">
+                <button class="carousel-offering-button" disabled onclick="goToNext(-1)">
+                    <span class="material-symbols-outlined offering-button-item">
+                        navigate_before
+                    </span>
+                </button>
+                <button class="carousel-offering-button" onclick="goToNext(1)">
+                    <span class="material-symbols-outlined">
+                        navigate_next
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="offering-container">
+            <div class="inner-offering-container">
+                <div class="offering-container-item">
+                    <p>Честные цены</p>
+                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <img class="offering-item-picture" src="./pics/wallet.png" alt="">
+                </div>
+
+                <div class="offering-container-item">
+
+                    <p>Только проверенные подарки</p>
+                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <img class="offering-item-picture" src="./pics/wallet.png" alt="">
+                </div>
+
+                <div class="offering-container-item">
+
+                    <p>Срок действия сертификатов - до 9 месяцев</p>
+                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <img class="offering-item-picture" src="./pics/wallet.png" alt="">
+                </div>
+
+                <div class="offering-container-item">
+
+                    <p>Мгновенный электронный сертификат</p>
+                    <p>Мгновенный электронный сертификат</p>
+                    <img class="offering-item-picture" src="./pics/wallet.png" alt="">
+                </div>
+                <div class="offering-container-item">
+
+                    <p>Возможность получить подарок, не выходя из дома</p>
+                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <img class="offering-item-picture" src="./pics/wallet.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="certificate-grid-package">
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"><img class="cert-picture-item" src="./pics/universal_certificate.jpg" alt=""></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+            <div class="certificate-container">
+                <a href="" class="cert-picture-link"></a>
+                <div class="certificate-description-container">
+                    <a href="" class="certificate-description-link">Универсальный подарочный сертификат</a>
+                    <p class="certificate-description">Владелец выбирает одну или несколько услуг из каталога на
+                        определенную сумму.</p>
+                </div>
+                <div class="certificate-container-bar">
+                    <div class="certificate-grade-bar">
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <span class="material-symbols-outlined grade-icon">
+                            grade
+                        </span>
+                        <a href="">26 отзывов</a>
+                    </div>
+                    <div class="certificate-price-bar">от 20 до 5000 руб.</div>
+                </div>
+                <a href="" class="certificate-details-link">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="shops">
+            <p>GIFTS.BY</p>
+            <div>
+                <p>Республика Беларусь</p>
+                <p>г. Минск</p>
+                <p>Время работы: 9:00-20:00</p>
+                <p>Без выходных</p>
+            </div>
+        </div>
+        <div class="company-information">
+            <a href="">О нас</a>
+            <a href="">Отзывы</a>
+            <a href="">Наши партнеры</a>
+        </div>
+        <div class="contacts">
+            <p>КОНТАКТЫ</p>
+            <p>+375 29 555-555-555 (МТС)</p>
+            <p>+375 29 333-333-333 (А1)</p>
+            <p>E-MAIL:</p>
+            <p>info@gifts.by</p>
+        </div>
+
+    </div>
+    <script src="./js/main_page.js"></script>
 </body>
+
 </html>
