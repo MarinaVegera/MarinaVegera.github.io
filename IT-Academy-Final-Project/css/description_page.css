@@ -1,0 +1,267 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-size: 18px;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+.white-color{
+    color: white;
+}
+
+.header {
+    width: calc(100% - 30px);
+    /* width: 100%;*/
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: solid 1px #eaeaea;
+    background-color: white;
+    padding: 0 15px;
+
+}
+
+.sidebar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.sidebar {
+    position: absolute;
+    background: #fbfcf9;
+    padding-top: 20px;
+    width: 350px;
+    left: -350px;
+    box-sizing: border-box;
+    transition: left 0.5s ease-in-out;
+    z-index: 100;
+}
+
+#sidebar:checked~.sidebar {
+    left: 0;
+
+}
+
+.sidebar-item {
+    list-style-type: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.header-action-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.certificate-grade-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-title {
+    margin-top: 85px;
+}
+
+.grade-icon {
+    color: #d9af24;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+}
+
+.certificate-info-block {
+    margin: 30px 0;
+}
+
+.screen-pic-item {
+    width: 100%;
+}
+
+.advantages-box {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 30px 15px;
+    padding: 40px 10px;
+    background: url(../pics/bg_1.png);
+    background-size: cover;
+    background-color: #faf4f6;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.certificate-details-block {
+    margin: 30px 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    background: url(../pics/bg_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #faf4f6;
+    font-size: 14px;
+    border-radius: 10px;
+
+}
+
+.certificate-details-block-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 15px;
+    color: #898c90;
+
+}
+
+.certificate-details-link-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.certificate-details-link-item {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: url(../pics/gift.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #e5ec50;
+    font-weight: bold;
+
+}
+.pink-busket-background{
+    
+    background: url(../pics/white_busket.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #ef879e;
+    color: white;
+}
+
+.photo-block {
+    display: grid;
+
+    aspect-ratio: 4 / 1;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 15px;
+}
+
+.rowspan-2 {
+    grid-row: span 2;
+}
+
+.colspan-2 {
+    grid-column: span 2;
+}
+
+.photo-item-1 {
+
+    background: url(../pics/ponyvschildren.jpg);
+}
+
+.photo-item-2 {
+
+    background: url(../pics/pony5.jpg);
+}
+
+.photo-item-3 {
+
+    background: url(../pics/pony-forest.jpg);
+}
+
+.photo-item-4 {
+
+    background: url(../pics/pony4.jpg);
+}
+
+.photo-item-5 {
+    background: url(../pics/pony1.png);
+
+}
+
+.photo-item-6 {
+    background: url(../pics/pony-ride2.jpg);
+
+}
+
+.photo-item {
+
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.tab-header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px #d4d9d8;
+}
+
+.tab-header {
+    padding: 5px;
+}
+
+.tab-header {
+    border-bottom: solid 2px #459a97;
+    cursor: pointer;
+}
+
+.tab-activity-information-block {
+    margin: 30px 15px;
+}
+
+.tab-activity-information {
+    display: none;
+}
+
+.tab-activity-information.shown {
+    display: block;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #ebebeb;
+    background-color: #f9f5f5c7;
+    box-shadow: 10px 5px 10px #b2b2cc;
+}
+
+.company-information {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

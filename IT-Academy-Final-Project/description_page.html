@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/3f764d3060.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./css/description_page.css">
+</head>
+
+<body>
+    <input type="checkbox" id="sidebar" hidden>
+
+    <div class="header">
+
+        <label for="sidebar" class="sidebar-container">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+            <span>Каталог</span>
+        </label>
+        <a href="./index.html">gifts.by</a>
+        <a href="">Активировать подарок</a>
+        <div class="header-action-container">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+            <span class="material-symbols-outlined">
+                person
+            </span>
+
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li class="sidebar-item"><a href="">Весь каталог</a></li>
+            <li class="sidebar-item"><a href="">Активный отдых</a></li>
+            <li class="sidebar-item"><a href="">Обучение и мастер-классы</a></li>
+            <li class="sidebar-item"><a href="">Романтические подарки</a></li>
+            <li class="sidebar-item"><a href="">Красота и здоровье</a></li>
+            <li class="sidebar-item"><a href="">Подарочные наборы</a></li>
+            <li class="sidebar-item"><a href="">Онлайн-подарки</a></li>
+        </ul>
+    </div>
+    <p class="page-title">Катание на пони для детей в сопровождении инструктора</p>
+    <div class="certificate-grade-bar">
+        <span class="material-symbols-outlined grade-icon">
+            grade
+        </span>
+        <span class="material-symbols-outlined grade-icon">
+            grade
+        </span>
+        <span class="material-symbols-outlined grade-icon">
+            grade
+        </span>
+        <span class="material-symbols-outlined grade-icon">
+            grade
+        </span>
+        <span class="material-symbols-outlined grade-icon">
+            grade
+        </span>
+        <a href="">10 отзывов</a>
+    </div>
+    <div class="certificate-info-block">
+        <img class="screen-pic-item" src="./pics/screen_pony.jpg" alt="">
+        <div class="advantages-box">
+            <p>Теперь впечатления удобно покупать и для себя</p>
+            <p>покупка в 1 клик 24/7</p>
+            <p>не нужно активировать</p>
+            <p>контакты для записи и электронный сертификат у вас по SMS через 30 сек. после оплаты</p>
+        </div>
+        <div class="certificate-details-block">
+            <div class="certificate-details-block-container">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Конное ранчо Green Ranch</p>
+            </div>
+            <div class="certificate-details-block-container">
+                <i class="fa-solid fa-user-group"></i>
+                <p>1 ребенок</p>
+            </div>
+            <div class="certificate-details-block-container">
+                <i class="fa-regular fa-calendar"></i>
+                <p>3 месяца со дня покупки</p>
+            </div>
+            <div class="rowspan-2 ">
+                <div class="certificate-details-link-container">
+                    <div class="certificate-details-link-item">
+                        <a href="">Подарить</a>
+                    </div>
+                    <div class="certificate-details-link-item pink-busket-background">
+                        <a href="" class="white-color">Купить себе</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate-details-block-container">
+                <i class="fa-regular fa-clock"></i>
+                <p>1 час</p>
+            </div>
+            <div class="certificate-details-block-container">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <p>Круглый год</p>
+            </div>
+            <div class="certificate-details-block-container">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+                <p>Не только в подарок, но и для себя</p>
+            </div>
+        </div>
+        <a href="https://greenranch.by/index.html">Подробнее о компании</a>
+    </div>
+    <p>Фотогалерея</p>
+    <div class="photo-block">
+        <div class="photo-item rowspan-2 colspan-2 photo-item-1"></div>
+        <div class="photo-item photo-item-2"></div>
+        <div class="photo-item photo-item-3"></div>
+        <div class="photo-item photo-item-4"></div>
+        <div class="photo-item photo-item-5"></div>
+        <div class="photo-item photo-item-6"></div>
+    </div>
+    <div class="tab-header-container">
+        <div class="tab-header" onclick="showTabActivityInfo(1);">Описание</div>
+        <div class="tab-header" onclick="showTabActivityInfo(2)">Важно знать</div>
+    </div>
+    <div class="tab-activity-information-block">
+        <div class="tab-activity-information tab-activity-information-1">Незабываемая сказка!
+            Чтобы Ваша дочь почувствовала себя настоящей принцессой или сын — благородным рыцарем, подарите им
+            сертификат от Surprise.by в Green Ranch, где:
+        </div>
+        <div class="tab-activity-information tab-activity-information-2">Важно знать
+            Перед поездкой необходимо предварительно записаться на удобный день и выбрать время.
+            Одевайте ребенка в удобную и свободную одежду, чтобы малыш чувствовал себя комфортно.
+            Ребенка всегда сопровождает инструктор.
+            Перед поездкой мастер объясняет правила безопасности и выдаёт защитную экипировку.
+            Прогулка проходит только шагом! </div>
+    </div>
+    <div class="delivery-block">
+        <p>Способы доставки</p>
+    </div>
+    <div class="footer">
+        <div class="shops">
+            <p>GIFTS.BY</p>
+            <div>
+                <p>Республика Беларусь</p>
+                <p>г. Минск</p>
+                <p>Время работы: 9:00-20:00</p>
+                <p>Без выходных</p>
+            </div>
+        </div>
+        <div class="company-information">
+            <a href="">О нас</a>
+            <a href="">Отзывы</a>
+            <a href="">Наши партнеры</a>
+        </div>
+        <div class="contacts">
+            <p>КОНТАКТЫ</p>
+            <p>+375 29 555-555-555 (МТС)</p>
+            <p>+375 29 333-333-333 (А1)</p>
+            <p>E-MAIL:</p>
+            <p>info@gifts.by</p>
+        </div>
+
+    </div>
+    <script src="./js/description_page.js"></script>
+</body>
+
+</html>
