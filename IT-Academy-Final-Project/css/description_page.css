@@ -1,20 +1,22 @@
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #f7f7f7;
+    color: #002f2f;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #002f2f;
     cursor: pointer;
 }
 
 p {
     margin: 0;
 }
-.white-color{
+
+.white-color {
     color: white;
 }
 
@@ -154,16 +156,19 @@ p {
     border-radius: 10px;
     background: url(../pics/gift.svg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position-y: center;
+    background-position-x: 5%;
     background-color: #e5ec50;
     font-weight: bold;
 
 }
-.pink-busket-background{
-    
+
+.pink-busket-background {
+
     background: url(../pics/white_busket.svg);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position-y: center;
+    background-position-x: 5%;
     background-color: #ef879e;
     color: white;
 }
@@ -250,6 +255,32 @@ p {
     display: block;
 }
 
+.delivery-block {
+    /* display: flex;
+   justify-content: space-between;*/
+    gap: 15px;
+    margin: 30px 15px;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+.delivery-method-box {
+    border: solid 1px #ebebeb;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 30px 20px;
+    box-shadow: 10px 5px 10px #b2b2cc;
+    flex-grow: 1;
+}
+
+.title-style {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+}
+
 .footer {
     margin-top: 30px;
     padding: 15px 30px;
@@ -258,10 +289,63 @@ p {
     border: solid 1px #ebebeb;
     background-color: #f9f5f5c7;
     box-shadow: 10px 5px 10px #b2b2cc;
+    font-size: 14px;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .company-information {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.network-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.network-box {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #f5a0b7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #efa7b5;
+    color: white;
+}
+
+.icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.facebook-icon:hover {
+    background-color: #0c93e7;
+    border-color: #0c93e7;
+}
+
+.instagram-icon:hover {
+    background-color: #d83655;
+    border-color: #d83655;
+}
+
+.youtube-icon:hover {
+    background-color: #c10f04;
+    border-color: #c10f04;
 }

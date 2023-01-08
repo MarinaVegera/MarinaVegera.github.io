@@ -6,7 +6,13 @@
         box.classList.add('hide')
     }
 }*/
-function openContentCategory() {
+function openContent(type) {
+    const dialog = document.querySelector('.choice-radio-container-'+type);
+    dialog.classList.toggle('shown');
+    const item = document.querySelector('.expand-item-'+type);
+    item.classList.toggle('add-expand-rotate');
+}
+/*function openContentCategory() {
     const dialog = document.querySelector('.choice-radio-container-category');
     dialog.classList.toggle('shown');
     const item = document.querySelector('.expand-item-category');
@@ -23,7 +29,7 @@ function openContentPrice() {
     dialog.classList.toggle('shown');
     const item = document.querySelector('.expand-item-price');
     item.classList.toggle('add-expand-rotate');
-}
+}*/
 /*function changeCategory() {
     const box = document.querySelector('#box');
     const categoryInput = document.querySelector('#category-input');
@@ -37,8 +43,8 @@ function openContentPrice() {
 }*/
 
 /*document.querySelector('.radio-item').addEventListener('click', () => */
-function changeCategory() {
-    let radioCategory = document.querySelectorAll('.radio-item');
+function changeCategory(type) {
+    let radioCategory = document.querySelectorAll('.radio-item-'+type);
     let data;
     for (let i = 0; i < radioCategory.length; i++) {
         if (radioCategory[i].checked) {
@@ -47,7 +53,7 @@ function changeCategory() {
         }
     }
    /* document.querySelector('#category-input').value = data;*/
-    document.querySelector('.value-choice').textContent = data;
+    document.querySelector('.value-choice-'+type).textContent = data;
 }
 
 let currentImageIndex = 0;

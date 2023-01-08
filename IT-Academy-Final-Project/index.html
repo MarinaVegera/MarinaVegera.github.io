@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>gifts.by</title>
+    <script src="https://kit.fontawesome.com/3f764d3060.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -29,7 +30,7 @@
             <span>Каталог</span>
         </label>
         <a href="./index.html">gifts.by</a>
-        <a href="">Активировать подарок</a>
+        <a href="" class="media-none-display">Активировать подарок</a>
         <div class="header-action-container">
             <span class="material-symbols-outlined">
                 search
@@ -45,13 +46,14 @@
     </div>
     <div class="sidebar">
         <ul>
-            <li class="sidebar-item"><a href="">Весь каталог</a></li>
+            <li class="sidebar-item"><a href="" class="sidebar-accent-style">Весь каталог</a></li>
             <li class="sidebar-item"><a href="">Активный отдых</a></li>
             <li class="sidebar-item"><a href="">Обучение и мастер-классы</a></li>
             <li class="sidebar-item"><a href="">Романтические подарки</a></li>
             <li class="sidebar-item"><a href="">Красота и здоровье</a></li>
             <li class="sidebar-item"><a href="">Подарочные наборы</a></li>
             <li class="sidebar-item"><a href="">Онлайн-подарки</a></li>
+            <li class="sidebar-item"><a href="" class="sidebar-accent-style">Активировать подарок</a></li>
         </ul>
     </div>
     <div class="main">
@@ -64,118 +66,117 @@
                         expand_less
                     </span>
                 </label>-->
-                <div class="input-field" onclick="openContentCategory()">
-                    <span class="value-choice">Категория</span>
+                <div class="input-field" onclick="openContent('category')">
+                    <span class="value-choice value-choice-category">Категория</span>
                     <span class="material-symbols-outlined expand-item-category">
                         expand_less
                     </span>
                 </div>
                 <div class="choice-radio-container choice-radio-container-category" hidden>
-                    <input class="radio-item" type="radio" id="active-rest" name="category-value" value="Активный отдых"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="active-rest" name="category-value"
+                        value="Активный отдых" onclick="changeCategory('category')" hidden>
                     <label for="active-rest">Активный отдых</label>
-                    <input class="radio-item" type="radio" id="training" name="category-value"
-                        value="Обучение и мастер-классы" onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="training" name="category-value"
+                        value="Обучение и мастер-классы" onclick="changeCategory('category')" hidden>
                     <label for="training">Обучение и мастер-классы</label>
-                    <input class="radio-item" type="radio" id="romantic-gifts" name="category-value"
-                        value="Романтические подарки" onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="romantic-gifts" name="category-value"
+                        value="Романтические подарки" onclick="changeCategory('category')" hidden>
                     <label for="romantic-gifts">Романтические подарки</label>
-                    <input class="radio-item" type="radio" id="beauty" name="category-value" value="Красота и здоровье"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="beauty" name="category-value"
+                        value="Красота и здоровье" onclick="changeCategory('category')" hidden>
                     <label for="beauty">Красота и здоровье</label>
-                    <input class="radio-item" type="radio" id="gift-set" name="category-value" value="Наборы"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="gift-set" name="category-value"
+                        value="Наборы" onclick="changeCategory('category')" hidden>
                     <label for="gift-set">Наборы</label>
-                    <input class="radio-item" type="radio" id="online" name="category-value" value="Онлайн"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-category" type="radio" id="online" name="category-value"
+                        value="Онлайн" onclick="changeCategory('category')" hidden>
                     <label for="online">Онлайн</label>
                 </div>
             </div>
             <div class="category-container">
-                <div class="input-field" onclick="openContentWhom()">
-                    <span class="value-choice">Кому</span>
+                <div class="input-field" onclick="openContent('whom')">
+                    <span class="value-choice value-choice-whom">Кому</span>
                     <span class="material-symbols-outlined expand-item-whom">
                         expand_less
                     </span>
                 </div>
                 <div class="choice-radio-container choice-radio-container-whom" hidden>
-                    <input class="radio-item" type="radio" id="for-her" name="for-whom" value="Для нее"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-her" name="for-whom" value="Для нее"
+                        onclick="changeCategory('whom')" hidden>
                     <label for="for-her">Для нее</label>
-                    <input class="radio-item" type="radio" id="for-him" name="for-whom" value="Для него"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-him" name="for-whom" value="Для него"
+                        onclick="changeCategory('whom')" hidden>
                     <label for="for-him">Для него</label>
-                    <input class="radio-item" type="radio" id="for-friends" name="for-whom" value="Друзьям"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-friends" name="for-whom"
+                        value="Друзьям" onclick="changeCategory('whom')" hidden>
                     <label for="for-friends">Друзьям</label>
-                    <input class="radio-item" type="radio" id="for-parents" name="for-whom" value="Родителям"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-parents" name="for-whom"
+                        value="Родителям" onclick="changeCategory('whom')" hidden>
                     <label for="for-parents">Родителям</label>
-                    <input class="radio-item" type="radio" id="for-child" name="for-whom" value="Для ребенка"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-child" name="for-whom"
+                        value="Для ребенка" onclick="changeCategory('whom')" hidden>
                     <label for="for-child">Для ребенка</label>
-                    <input class="radio-item" type="radio" id="for-family" name="for-whom" value="Для семьи"
-                        onclick="changeCategory()" hidden>
+                    <input class="radio-item radio-item-whom" type="radio" id="for-family" name="for-whom"
+                        value="Для семьи" onclick="changeCategory('whom')" hidden>
                     <label for="for-family">Для семьи</label>
                 </div>
             </div>
             <div class="category-container">
-                <!--<input type="text" id="category-input" placeholder="Категория" onclick="openContent()">
-                <label for="category-input" class="label-item">
-                    <span class="material-symbols-outlined expand-item">
-                        expand_less
-                    </span>
-                </label>-->
-                <div class="input-field" onclick="openContentPrice()">
-                    <span class="value-choice">Цена</span>
+                <div class="input-field" onclick="openContent('price')">
+                    <span class="value-choice value-choice-price">Цена</span>
                     <span class="material-symbols-outlined expand-item-price">
                         expand_less
                     </span>
                 </div>
                 <div class="choice-radio-container choice-radio-container-price" hidden>
-                    <input class="radio-item" type="radio" id="active-rest" name="category-value" value="Активный отдых"
-                        onclick="changeCategory()" hidden>
-                    <label for="active-rest">Активный отдых</label>
-                    <input class="radio-item" type="radio" id="training" name="category-value"
-                        value="Обучение и мастер-классы" onclick="changeCategory()" hidden>
-                    <label for="training">Обучение и мастер-классы</label>
-                    <input class="radio-item" type="radio" id="romantic-gifts" name="category-value"
-                        value="Романтические подарки" onclick="changeCategory()" hidden>
-                    <label for="romantic-gifts">Романтические подарки</label>
-                    <input class="radio-item" type="radio" id="beauty" name="category-value" value="Красота и здоровье"
-                        onclick="changeCategory()" hidden>
-                    <label for="beauty">Красота и здоровье</label>
-                    <input class="radio-item" type="radio" id="gift-set" name="category-value" value="Наборы"
-                        onclick="changeCategory()" hidden>
-                    <label for="gift-set">Наборы</label>
-                    <input class="radio-item" type="radio" id="online" name="category-value" value="Онлайн"
-                        onclick="changeCategory()" hidden>
-                    <label for="online">Онлайн</label>
+                    <input class="radio-item radio-item-price" type="radio" id="to-50" name="price-value"
+                        value="До 50 руб." onclick="changeCategory('price')" hidden>
+                    <label for="to-50">До 50 руб.</label>
+                    <input class="radio-item radio-item-price" type="radio" id="from-50-to-100" name="price-value"
+                        value="50-100 руб." onclick="changeCategory('price')" hidden>
+                    <label for="from-50-to-100">50-100 руб.</label>
+                    <input class="radio-item radio-item-price" type="radio" id="from-100-to-300" name="price-value"
+                        value="100-300 руб." onclick="changeCategory('price')" hidden>
+                    <label for="from-100-to-300">100-300 руб.</label>
+                    <input class="radio-item radio-item-price" type="radio" id="above-300" name="price-value"
+                        value="Более 300 руб." onclick="changeCategory('price')" hidden>
+                    <label for="above-300">Более 300 руб.</label>
                 </div>
             </div>
             <button type="submit" class="button-choice">Подобрать</button>
         </form>
+        <div class="media-image-container">
+            
+        </div>
         <div class="navigation-bar">
-
-            <a class="navigation-bar-item" href=""><img src="./pics/gift.png" alt=""><span>GIFTS.BY</span>
-                <p>Все сертификаты</p>
-            </a>
-
-            <a class="navigation-bar-item item-background-sky" href=""><img class="navigation-picture"
-                    src="./pics/spa.png" alt="">
-                <p>Красота и здоровье</p>
-            </a>
-            <a class="navigation-bar-item item-background-yellow" href=""><img class="navigation-picture"
-                    src="./pics/education.png" alt="">
-                <p>Обучение и мастер-классы</p>
-            </a>
-            <a class="navigation-bar-item item-background-dark-green" href=""><img class="navigation-picture"
-                    src="./pics/active.png" alt="">
-                <p>Активный отдых</p>
-            </a>
-            <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/cake.png" alt="">
-                <p>Подарок на день рождения</p>
-            </a>
+            <div class="navigation-bar-item-wraper">
+                <a class="navigation-bar-item" href=""><img src="./pics/gift.png" alt=""><span>GIFTS.BY</span>
+                    <p class="navigation-bar-text-style">Все сертификаты</p>
+                </a>
+            </div>
+            <div class="navigation-bar-item-wraper">
+                <a class="navigation-bar-item item-background-sky" href=""><img class="navigation-picture"
+                        src="./pics/spa.png" alt="">
+                    <p>Красота и здоровье</p>
+                </a>
+            </div>
+            <div class="navigation-bar-item-wraper">
+                <a class="navigation-bar-item item-background-yellow" href=""><img
+                        class="navigation-picture img-correction-position" src="./pics/education.png" alt="">
+                    <p>Обучение и мастер-классы</p>
+                </a>
+            </div>
+            <div class="navigation-bar-item-wraper">
+                <a class="navigation-bar-item item-background-dark-green" href=""><img class="navigation-picture"
+                        src="./pics/active.png" alt="">
+                    <p>Активный отдых</p>
+                </a>
+            </div>
+            <div class="navigation-bar-item-wraper">
+                <a class="navigation-bar-item" href=""><img class="navigation-picture" src="./pics/cake.png" alt="">
+                    <p>Подарок на день рождения</p>
+                </a>
+            </div>
         </div>
         <div class="navigation-offering-container">
             <p class="title-container">Мы предлагаем</p>
@@ -196,37 +197,39 @@
             <div class="inner-offering-container">
                 <div class="offering-container-item">
                     <p>Честные цены</p>
-                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <p class="offering-item-text-style">Никаких переплат - наши цены не отличаются от цен партнеров</p>
                     <img class="offering-item-picture" src="./pics/wallet.png" alt="">
                 </div>
 
                 <div class="offering-container-item item-background-light-pink">
                     <p>Только проверенные подарки</p>
-                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <p class="offering-item-text-style">Каждое впечатление тестируется нашим сотрудником перед добавлением в каталог</p>
                     <img class="offering-item-picture" src="./pics/heart.png" alt="">
                 </div>
 
                 <div class="offering-container-item item-background-light-violet">
                     <p>Срок действия сертификатов - до 9 месяцев</p>
-                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <p class="offering-item-text-style">Действующий сертификат можно обменять на универсальный, который будет активен еще 6 месяцев</p>
                     <img class="offering-item-picture" src="./pics/like.png" alt="">
                 </div>
 
                 <div class="offering-container-item">
                     <p>Мгновенный электронный сертификат</p>
-                    <p>Мгновенный электронный сертификат</p>
+                    <p class="offering-item-text-style">Отправим в SMS сразу после покупки</p>
                     <img class="offering-item-picture" src="./pics/envelope.png" alt="">
                 </div>
                 <div class="offering-container-item item-background-light-pink">
                     <p>Возможность получить подарок, не выходя из дома</p>
-                    <p>Никаких переплат - наши цены не отличаются от цен партнеров</p>
+                    <p class="offering-item-text-style">Мы заботимся о вас - оставайтесь дома и получайте яркие эмоции</p>
                     <img class="offering-item-picture" src="./pics/santa.png" alt="">
                 </div>
             </div>
         </div>
+        <p class="title-container">Впечатления в Минске: только увлекательное и интересное на сайте gifts.by</p>
         <div class="certificate-grid-package">
             <div class="certificate-container">
-                <a href="./description_page.html" class="cert-picture-link"><img class="cert-picture-item" src="./pics/horse.jpg" alt=""></a>
+                <a href="./description_page.html" class="cert-picture-link"><img class="cert-picture-item"
+                        src="./pics/horse.jpg" alt=""></a>
                 <div class="certificate-description-container">
                     <a href="" class="certificate-description-link">Катание на пони для детей в сопровождении
                         инструктора</a>
@@ -533,7 +536,7 @@
     </div>
     <div class="footer">
         <div class="shops">
-            <p>GIFTS.BY</p>
+            <p class="footer-title">GIFTS.BY</p>
             <div>
                 <p>Республика Беларусь</p>
                 <p>г. Минск</p>
@@ -542,16 +545,24 @@
             </div>
         </div>
         <div class="company-information">
-            <a href="">О нас</a>
-            <a href="">Отзывы</a>
-            <a href="">Наши партнеры</a>
+            <a href="" class="company-information-link">О нас</a>
+            <a href="" class="company-information-link">Отзывы</a>
+            <a href="" class="company-information-link">Наши партнеры</a>
         </div>
         <div class="contacts">
-            <p>КОНТАКТЫ</p>
+            <p class="footer-title">КОНТАКТЫ</p>
             <p>+375 29 555-555-555 (МТС)</p>
             <p>+375 29 333-333-333 (А1)</p>
             <p>E-MAIL:</p>
             <p>info@gifts.by</p>
+        </div>
+        <div class="network-container">
+            <p class="footer-title">Мы в социальных сетях</p>
+            <div class="network-box">
+                <a class="icon instagram-icon" href="https://www.instagram.com/" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a class="icon facebook-icon" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a class="icon youtube-icon" href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
         </div>
 
     </div>

@@ -1,38 +1,43 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     margin: 0;
+    background-color: #f7f7f7;
+    color: #002f2f;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #002f2f;
     cursor: pointer;
 }
 
 p {
     margin: 0;
 }
-.flex-grow{
+
+.flex-grow {
     flex-grow: 1;
 }
+
 .margin-top-70 {
     margin-top: 70px;
 }
 
 .header {
     width: calc(100% - 30px);
-   /* width: 100%;*/
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 200;
     border-bottom: solid 1px #eaeaea;
     background-color: white;
     padding: 0 15px;
-    
+    min-width: 300px;
+
 }
 
 .sidebar-container {
@@ -44,14 +49,19 @@ p {
 }
 
 .sidebar {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
     background: #fbfcf9;
     padding-top: 20px;
     width: 350px;
     left: -350px;
     box-sizing: border-box;
     transition: left 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 200;
+    font-weight: 600;
+}
+.sidebar-accent-style{
+    color: #29a29d;
 }
 
 #sidebar:checked~.sidebar {
@@ -60,7 +70,7 @@ p {
 }
 
 .sidebar-item {
-   list-style-type: none;
+    list-style-type: none;
     font-size: 18px;
     padding: 10px;
 }
@@ -73,20 +83,38 @@ p {
 }
 
 .choice-block {
-    /*padding-top: 50px;*/
     height: 60px;
     display: flex;
     align-items: center;
     margin: 85px 0 15px;
     box-shadow: 10px 5px 10px #b2b2cc;
-    /*justify-content: space-between;*/
+}
+
+.media-image-container {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .choice-block {
+        display: none;
+    }
+
+    .media-image-container {
+        display: block;
+        margin-top: 85px;
+        height: 170px;
+        width: 100%;
+        background: url(../pics/choose_certificate4.jpg);
+        background-position: right;
+        background-size: cover;
+    }
 }
 
 .title-container {
 
     font-weight: bold;
     padding: 15px 0;
-
+    font-size: 20px;
 }
 
 .choice-container {
@@ -101,18 +129,33 @@ p {
     justify-content: space-between;
     gap: 20px;
     margin-top: 20px;
-
 }
 
 .navigation-bar-item {
-    width: 200px;
+    width: 100%;
     padding: 15px;
     background-color: #f15b84;
-    border-radius: 10px;
+    /* border-radius: 10px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: transform 0.3s ease-in;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.navigation-bar-item-wraper {
+    min-width: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.navigation-bar-item:hover {
+    transform: scale(1.1);
 }
 
 .item-background-yellow {
@@ -129,6 +172,10 @@ p {
 
 .navigation-picture {
     width: 100%;
+}
+
+.img-correction-position {
+    transform: translateX(25px);
 }
 
 .navigation-offering-container {
@@ -164,6 +211,17 @@ p {
     position: relative;
     z-index: 100;
     border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    
+
+}
+
+.offering-item-text-style {
+    font-size: 12px;
+    color: #91898a;
+    font-weight: 600;
 }
 
 .item-background-light-pink {
@@ -174,13 +232,6 @@ p {
     background-color: #f3f3fa;
 }
 
-/*.additional-background{
-    background: url(../pics/wallet.png);
-    height: 100%;
-    background-position: right;
-    background-repeat: no-repeat;
-    z-index: 100;
-}*/
 .offering-item-picture {
     width: 100px;
     position: absolute;
@@ -226,12 +277,15 @@ p {
 .choice-radio-container {
     /*display: flex;
     flex-direction: column;*/
+    width: 300px;
     position: absolute;
-    background-color: white;
+    background-color: #fff7f7;
     border: solid 1px #ebebeb;
     border-radius: 10px;
     padding: 10px 15px;
     color: #6c6c6c;
+    font-size: 14px;
+    font-weight: 600;
 
 }
 
@@ -242,18 +296,9 @@ p {
     margin-top: 10px;
 }
 
-/*.label-item{
-
-    font-size: 16px;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: solid 1px #3a58af;
-}*/
 .input-field {
     height: 100%;
+    background-color: #fff7f799;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -263,6 +308,12 @@ p {
 
 .input-field:hover {
     cursor: pointer;
+}
+
+.value-choice {
+
+    font-size: 14px;
+    margin-left: 15px;
 }
 
 .add-expand-rotate {
@@ -295,6 +346,7 @@ p {
     background-color: #f08aa1;
     color: white;
     border: solid 1px #ebebeb;
+    cursor: pointer;
 }
 
 .certificate-grid-package {
@@ -303,6 +355,13 @@ p {
     align-items: baseline;
     gap: 20px;
     margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+    .certificate-grid-package {
+        display: block;
+    }
+
 }
 
 .certificate-container {
@@ -315,29 +374,32 @@ p {
 }
 
 .cert-picture-link {
-    /*   display: inline-block;
-    width: 100%;
-    height: 100%;*/
-    /*background: url(../pics/universal_certificate.jpg);
-    background-size: cover;
-    background-position: center;*/
     margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .cert-picture-item {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease-in;
+}
+
+.cert-picture-item:hover {
+
+    transform: scale(1.1);
 }
 
 .certificate-description-link {
+    display: inline-block;
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .certificate-description {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .certificate-grade-bar {
@@ -352,6 +414,8 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
+    font-size: 12px;
+    min-width: 350px;
 
 }
 
@@ -362,15 +426,15 @@ p {
         'wght' 400,
         'GRAD' 0,
         'opsz' 48;
+        font-size: 18px;
 
 }
-.grade-icon-color-grey{
+
+.grade-icon-color-grey {
     color: #ddebeb;
 }
 
-/*.certificate-details-link{
-    
-}*/
+
 .certificate-details-link-container {
     width: 100%;
     height: 80px;
@@ -379,6 +443,11 @@ p {
     align-items: center;
     background-color: #e5ec50;
     border-radius: 10px;
+    
+}
+.certificate-price-bar{
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .footer {
@@ -389,10 +458,84 @@ p {
     border: solid 1px #ebebeb;
     background-color: #f9f5f5c7;
     box-shadow: 10px 5px 10px #b2b2cc;
+    font-size: 14px;
+    min-width: ;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .company-information {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.company-information-link:hover{
+    text-decoration: underline;
+}
+.network-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.network-box {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #f5a0b7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #efa7b5;
+    color: white;
+}
+
+.icon:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.facebook-icon:hover {
+    background-color: #0c93e7;
+    border-color: #0c93e7;
+}
+
+.instagram-icon:hover {
+    background-color: #d83655;
+    border-color: #d83655;
+}
+
+.youtube-icon:hover {
+    background-color: #c10f04;
+    border-color: #c10f04;
+}
+@media (max-width: 800px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .network-container{
+        display: block;
+    }
+    .network-box{
+        justify-content: start;
+    }
+}
+@media (max-width: 600px) {
+    .media-none-display{
+        display: none;
+    }
 }
