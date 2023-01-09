@@ -36,7 +36,7 @@ p {
     border-bottom: solid 1px #eaeaea;
     background-color: white;
     padding: 0 15px;
-    min-width: 300px;
+    min-width: 250px;
 
 }
 
@@ -49,7 +49,6 @@ p {
 }
 
 .sidebar {
-    /*position: absolute;*/
     position: fixed;
     background: #fbfcf9;
     padding-top: 20px;
@@ -60,13 +59,25 @@ p {
     z-index: 200;
     font-weight: 600;
 }
-.sidebar-accent-style{
+
+.close-item-display {
+    display: none;
+}
+
+.sidebar-accent-style {
     color: #29a29d;
 }
 
 #sidebar:checked~.sidebar {
     left: 0;
+}
 
+#sidebar:checked~.header label .close-item-display {
+    display: block;
+}
+
+#sidebar:checked~.header label .menu-item-display {
+    display: none;
 }
 
 .sidebar-item {
@@ -94,7 +105,7 @@ p {
     display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
     .choice-block {
         display: none;
     }
@@ -105,8 +116,10 @@ p {
         height: 170px;
         width: 100%;
         background: url(../pics/choose_certificate4.jpg);
-        background-position: right;
-        background-size: cover;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 10px;
     }
 }
 
@@ -214,7 +227,7 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    
+
 
 }
 
@@ -426,7 +439,7 @@ p {
         'wght' 400,
         'GRAD' 0,
         'opsz' 48;
-        font-size: 18px;
+    font-size: 18px;
 
 }
 
@@ -443,9 +456,10 @@ p {
     align-items: center;
     background-color: #e5ec50;
     border-radius: 10px;
-    
+
 }
-.certificate-price-bar{
+
+.certificate-price-bar {
     font-size: 16px;
     font-weight: 600;
 }
@@ -459,8 +473,7 @@ p {
     background-color: #f9f5f5c7;
     box-shadow: 10px 5px 10px #b2b2cc;
     font-size: 14px;
-    min-width: ;
-}
+  }
 
 .footer-title {
     font-weight: bold;
@@ -472,9 +485,12 @@ p {
     flex-direction: column;
     gap: 20px;
 }
-.company-information-link:hover{
+
+.company-information-link:hover {
     text-decoration: underline;
+    font-weight: bold;
 }
+
 .network-container {
     display: flex;
     flex-direction: column;
@@ -521,21 +537,25 @@ p {
     background-color: #c10f04;
     border-color: #c10f04;
 }
-@media (max-width: 800px) {
+
+@media (max-width: 700px) {
     .footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 20px;
     }
-    .network-container{
+
+    .network-container {
         display: block;
     }
-    .network-box{
+
+    .network-box {
         justify-content: start;
     }
 }
+
 @media (max-width: 600px) {
-    .media-none-display{
+    .media-none-display {
         display: none;
     }
 }

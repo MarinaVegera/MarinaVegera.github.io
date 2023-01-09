@@ -25,13 +25,16 @@
     <div class="header">
 
         <label for="sidebar" class="sidebar-container">
-            <span class="material-symbols-outlined">
+            <span class="material-symbols-outlined menu-item-display">
                 menu
+            </span>
+            <span class="material-symbols-outlined close-item-display">
+                close
             </span>
             <span>Каталог</span>
         </label>
         <a href="./index.html">gifts.by</a>
-        <a href="">Активировать подарок</a>
+        <a href="" class="media-none-display">Активировать подарок</a>
         <div class="header-action-container">
             <span class="material-symbols-outlined">
                 search
@@ -47,16 +50,17 @@
     </div>
     <div class="sidebar">
         <ul>
-            <li class="sidebar-item"><a href="">Весь каталог</a></li>
+            <li class="sidebar-item"><a href="" class="sidebar-accent-style">Весь каталог</a></li>
             <li class="sidebar-item"><a href="">Активный отдых</a></li>
             <li class="sidebar-item"><a href="">Обучение и мастер-классы</a></li>
             <li class="sidebar-item"><a href="">Романтические подарки</a></li>
             <li class="sidebar-item"><a href="">Красота и здоровье</a></li>
             <li class="sidebar-item"><a href="">Подарочные наборы</a></li>
             <li class="sidebar-item"><a href="">Онлайн-подарки</a></li>
+            <li class="sidebar-item"><a href="" class="sidebar-accent-style">Активировать подарок</a></li>
         </ul>
     </div>
-    <p class="page-title">Катание на пони для детей в сопровождении инструктора</p>
+    <p class="page-title title-container">Катание на пони для детей в сопровождении инструктора</p>
     <div class="certificate-grade-bar">
         <span class="material-symbols-outlined grade-icon">
             grade
@@ -78,7 +82,7 @@
     <div class="certificate-info-block">
         <img class="screen-pic-item" src="./pics/screen_pony.jpg" alt="">
         <div class="advantages-box">
-            <p>Теперь впечатления удобно покупать и для себя</p>
+            <p class="grey-color">Теперь впечатления удобно покупать и для себя</p>
             <p>покупка в 1 клик 24/7</p>
             <p>не нужно активировать</p>
             <p>контакты для записи и электронный сертификат у вас по SMS через 30 сек. после оплаты</p>
@@ -119,9 +123,19 @@
                 <p>Не только в подарок, но и для себя</p>
             </div>
         </div>
-        <a href="https://greenranch.by/index.html">Подробнее о компании</a>
+
+        <div class="certificate-details-link-container media-block-display">
+            <div class="certificate-details-link-item">
+                <a href="">Подарить</a>
+            </div>
+            <div class="certificate-details-link-item pink-busket-background">
+                <a href="" class="white-color">Купить себе</a>
+            </div>
+        </div>
+
+        <a href="https://greenranch.by/index.html" class="link-about-company">Подробнее о компании</a>
     </div>
-    <p>Фотогалерея</p>
+    <p class="title-container without-margin-top">Фотогалерея</p>
     <div class="photo-block">
         <div class="photo-item rowspan-2 colspan-2 photo-item-1"></div>
         <div class="photo-item photo-item-2"></div>
@@ -135,16 +149,26 @@
         <div class="tab-header" onclick="showTabActivityInfo(2)">Важно знать</div>
     </div>
     <div class="tab-activity-information-block">
-        <div class="tab-activity-information tab-activity-information-1">Незабываемая сказка!
-            Чтобы Ваша дочь почувствовала себя настоящей принцессой или сын — благородным рыцарем, подарите им
-            сертификат от Surprise.by в Green Ranch, где:
+        <div class="tab-activity-information tab-activity-information-1">
+            <p class="subtitle">Незабываемая сказка!</p>
+            <p>Чтобы Ваша дочь почувствовала себя настоящей принцессой или сын — благородным рыцарем, подарите им
+                сертификат от Surprise.by в Green Ranch.</p>
+            <p class="subtitle">Абсолютная безопасность!</p>
+            <ul class="list-infotmation">
+                <li>Ребенка всегда сопровождает инструктор.</li>
+                <li>Перед поездкой мастер объясняет правила безопасности.</li>
+                <li>Прогулка проходит только шагом! </li>
+            </ul>
         </div>
-        <div class="tab-activity-information tab-activity-information-2">Важно знать
-            Перед поездкой необходимо предварительно записаться на удобный день и выбрать время.
-            Одевайте ребенка в удобную и свободную одежду, чтобы малыш чувствовал себя комфортно.
-            Ребенка всегда сопровождает инструктор.
-            Перед поездкой мастер объясняет правила безопасности и выдаёт защитную экипировку.
-            Прогулка проходит только шагом! </div>
+        <div class="tab-activity-information tab-activity-information-2">
+            <p class="subtitle">Важно знать!</p>
+            <ul class="list-infotmation">
+                <li>Перед поездкой необходимо предварительно записаться на удобный день и выбрать время.</li>
+                <li>Одевайте ребенка в удобную и свободную одежду, чтобы малыш чувствовал себя комфортно.</li>
+                <li>Ребенка всегда сопровождает инструктор.</li>
+                <li>Перед поездкой мастер объясняет правила безопасности и выдаёт защитную экипировку.</li>
+            </ul>
+        </div>
     </div>
     <p class="title-style">Способы доставки</p>
     <div class="delivery-block">
@@ -180,9 +204,9 @@
             </div>
         </div>
         <div class="company-information">
-            <a href="">О нас</a>
-            <a href="">Отзывы</a>
-            <a href="">Наши партнеры</a>
+            <a href="" class="company-information-link">О нас</a>
+            <a href="" class="company-information-link">Отзывы</a>
+            <a href="" class="company-information-link">Наши партнеры</a>
         </div>
         <div class="contacts">
             <p class="footer-title ">КОНТАКТЫ</p>
