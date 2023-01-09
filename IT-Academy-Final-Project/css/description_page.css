@@ -275,6 +275,7 @@ ul {
 
     background-size: cover;
     border-radius: 10px;
+    background-position: center;
 }
 
 .tab-header-container {
@@ -427,9 +428,15 @@ ul {
 
     .photo-block {
 
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-
+    .media-rowspan-1{
+        grid-row: span 1;
+    }
+    .media-colspan-1{
+        grid-column: span 1;
+    }
     .photo-item {
         height: 250px;
         width: 100%;
