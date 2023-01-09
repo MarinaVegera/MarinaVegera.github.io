@@ -68,7 +68,7 @@ ul {
 .sidebar {
     position: fixed;
     background: #fbfcf9;
-    padding-top: 20px;
+    padding: 20px 0 20px 30px;
     width: 350px;
     left: -350px;
     box-sizing: border-box;
@@ -76,7 +76,8 @@ ul {
     z-index: 200;
     font-weight: 600;
 }
-.close-item-display{
+
+.close-item-display {
     display: none;
 }
 
@@ -87,9 +88,11 @@ ul {
 #sidebar:checked~.sidebar {
     left: 0;
 }
+
 #sidebar:checked~.header label .close-item-display {
     display: block;
 }
+
 #sidebar:checked~.header label .menu-item-display {
     display: none;
 }
@@ -98,6 +101,10 @@ ul {
     list-style-type: none;
     font-size: 18px;
     padding: 10px;
+}
+
+.sidebar-item:hover {
+    text-decoration: underline;
 }
 
 .header-action-container {
@@ -167,7 +174,6 @@ ul {
     font-size: 12px;
     border-radius: 10px;
     color: #777a7f;
-
 }
 
 .certificate-details-block-container {
@@ -257,22 +263,18 @@ ul {
 }
 
 .photo-item-4 {
-
     background: url(../pics/pony4.jpg);
 }
 
 .photo-item-5 {
     background: url(../pics/pony1.png);
-
 }
 
 .photo-item-6 {
     background: url(../pics/pony-ride2.jpg);
-
 }
 
 .photo-item {
-
     background-size: cover;
     border-radius: 10px;
     background-position: center;
@@ -309,7 +311,6 @@ ul {
 }
 
 .delivery-block {
-
     gap: 15px;
     margin: 30px 15px;
     margin-top: 0;
@@ -341,7 +342,6 @@ ul {
     background-color: #f9f5f5c7;
     box-shadow: 10px 5px 10px #b2b2cc;
     font-size: 14px;
-  
 }
 
 .footer-title {
@@ -357,7 +357,8 @@ ul {
 
 .company-information-link:hover {
     text-decoration: underline;
-    font-weight: bold;
+    font-weight: 400;
+    color: #29a29d;
 }
 
 .network-container {
@@ -429,14 +430,17 @@ ul {
     .photo-block {
 
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-    .media-rowspan-1{
+
+    .media-rowspan-1 {
         grid-row: span 1;
     }
-    .media-colspan-1{
+
+    .media-colspan-1 {
         grid-column: span 1;
     }
+
     .photo-item {
         height: 250px;
         width: 100%;
